@@ -1,0 +1,205 @@
+[
+  {
+    "tableName": "Users",
+    "columns": {
+      "id_usuario": { "type": "int", "primary": true, "generated": true },
+      "rut": { "type": "varchar", "length": 12, "nullable": false, "unique": true },
+      "nombre": { "type": "varchar", "length": 255, "nullable": false },
+      "apellido": { "type": "varchar", "length": 255, "nullable": false },
+      "email": { "type": "varchar", "length": 255, "nullable": false, "unique": true },
+      "telefono": { "type": "varchar", "length": 20, "nullable": false, "unique": true },
+      "contraseña": { "type": "varchar", "nullable": false },
+      "activo": { "type": "boolean", "nullable": false, "default": true },
+      "createdAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "nullable": false },
+      "updatedAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "onUpdate": "CURRENT_TIMESTAMP", "nullable": false }
+    },
+    "relations": [
+      { "name": "createdTasks", "type": "one-to-many", "target": "Task", "inverseSide": "creado_por" },
+      { "name": "assignedTasks", "type": "many-to-many", "target": "Task", "mappedBy": "usuarios_asignados" },
+      { "name": "registrations", "type": "one-to-many", "target": "RegistrationShift", "inverseSide": "user" },
+      { "name": "hospitalization", "type": "one-to-many", "target": "Hospitalization", "inverseSide": "user" },
+      { "name": "vetCheckups", "type": "one-to-many", "target": "VetCheckup", "inverseSide": "user" },
+      { "name": "procedures", "type": "one-to-many", "target": "Procedure", "inverseSide": "user" },
+      { "name": "Notice", "type": "one-to-many", "target": "Notice", "inverseSide": "user" },
+      { "name": "exam", "type": "one-to-many", "target": "Exam", "inverseSide": "user" },
+      { "name": "area", "type": "many-to-one", "target": "Area", "joinColumn": { "name": "area_id", "referencedColumnName": "id_area" }, "nullable": false },
+      { "name": "region", "type": "many-to-one", "target": "Region", "joinColumn": { "name": "region_id", "referencedColumnName": "id_region" }, "nullable": false },
+      { "name": "UserRole", "type": "one-to-many", "target": "UserRole", "inverseSide": "user", "nullable": false },
+      { "name": "hogar_temporal", "type": "many-to-one", "target": "FosterHome", "joinColumn": { "name": "hogar_temporal_id" } }
+    ]
+  },
+  {
+    "tableName": "Roles",
+    "columns": {
+      "id_rol": { "type": "int", "primary": true, "generated": true },
+      "nombre": { "type": "varchar", "length": 255, "nullable": false, "unique": true },
+      "createdAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "nullable": false },
+      "updatedAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "onUpdate": "CURRENT_TIMESTAMP", "nullable": false }
+    },
+    "relations": [
+      { "name": "RolePermission", "type": "one-to-many", "target": "RolePermission", "inverseSide": "role" },
+      { "name": "UserRole", "type": "one-to-many", "target": "UserRole", "inverseSide": "role" }
+    ]
+  },
+  {
+    "tableName": "Permissions",
+    "columns": {
+      "id_permiso": { "type": "int", "primary": true, "generated": true },
+      "nombre": { "type": "varchar", "length": 255, "nullable": false, "unique": true },
+      "createdAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "nullable": false },
+      "updatedAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "onUpdate": "CURRENT_TIMESTAMP", "nullable": false }
+    },
+    "relations": [
+      { "name": "RolePermission", "type": "one-to-many", "target": "RolePermission", "inverseSide": "permission" }
+    ]
+  },
+  {
+    "tableName": "Events",
+    "columns": {
+      "id_evento": { "type": "int", "primary": true, "generated": true },
+      "fecha": { "type": "varchar", "nullable": false },
+      "titulo": { "type": "varchar", "length": 255, "nullable": false },
+      "hora_inicio": { "type": "varchar", "nullable": true },
+      "hora_fin": { "type": "varchar", "nullable": true },
+      "lugar": { "type": "varchar", "nullable": false },
+      "descripcion": { "type": "text", "nullable": false },
+      "createdAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "nullable": false },
+      "updatedAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "onUpdate": "CURRENT_TIMESTAMP", "nullable": false }
+    },
+    "relations": []
+  },
+  {
+    "tableName": "Notices",
+    "columns": {
+      "id_aviso": { "type": "int", "primary": true, "generated": true },
+      "estado": { "type": "varchar", "length": 20, "nullable": false, "default": "draft" },
+      "titulo": { "type": "varchar", "length": 255, "nullable": false },
+      "descripcion": { "type": "text", "nullable": false },
+      "fecha_publicacion": { "type": "varchar", "length": 255, "nullable": false },
+      "publico": { "type": "boolean", "nullable": false },
+      "createdAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "nullable": false },
+      "updatedAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "onUpdate": "CURRENT_TIMESTAMP", "nullable": false }
+    },
+    "relations": [
+      { "name": "user", "type": "many-to-one", "target": "User", "joinColumn": { "name": "id_user", "referencedColumnName": "id_usuario" }, "nullable": false }
+    ]
+  },
+  {
+    "tableName": "Tasks",
+    "columns": {
+      "id_tarea": { "type": "int", "primary": true, "generated": true },
+      "descripcion": { "type": "text", "nullable": false },
+      "titulo": { "type": "varchar", "length": 255, "nullable": false },
+      "estado": { "type": "enum", "enum": ["pendiente", "en_progreso", "completada"], "default": "pendiente" },
+      "prioridad": { "type": "enum", "enum": ["baja", "media", "alta"] },
+      "fecha_limite": { "type": "timestamp with time zone", "nullable": false },
+      "createdAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "nullable": false },
+      "updatedAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "onUpdate": "CURRENT_TIMESTAMP", "nullable": false }
+    },
+    "relations": [
+      { "name": "creado_por", "type": "many-to-one", "target": "User", "joinColumn": { "name": "created_by", "referencedColumnName": "id_usuario" }, "nullable": false },
+      { "name": "usuarios_asignados", "type": "many-to-many", "target": "User", "joinTable": { "name": "task_assignees" }, "nullable": true }
+    ]
+  },
+  {
+    "tableName": "Shifts",
+    "columns": {
+      "id_turno": { "type": "int", "primary": true, "generated": true },
+      "fecha": { "type": "varchar", "nullable": false },
+      "titulo": { "type": "varchar", "length": 255, "nullable": false },
+      "hora_inicio": { "type": "varchar", "nullable": false },
+      "hora_fin": { "type": "varchar", "nullable": false },
+      "estado": { "type": "boolean", "default": false },
+      "cantidad_maxima": { "type": "int", "nullable": false },
+      "createdAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "nullable": false },
+      "updatedAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "onUpdate": "CURRENT_TIMESTAMP", "nullable": false }
+    },
+    "relations": [
+      { "name": "registrations", "type": "one-to-many", "target": "RegistrationShift", "inverseSide": "shift" }
+    ]
+  },
+  {
+    "tableName": "RegistrationShifts",
+    "columns": {
+      "turno_registro_id": { "type": "int", "primary": true, "generated": true, "nullable": false },
+      "estado": { "type": "enum", "enum": ["ASISTIO", "AUSENTE", "CANCELADO"], "default": "ASISTIO" },
+      "createdAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "nullable": false },
+      "updatedAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "onUpdate": "CURRENT_TIMESTAMP", "nullable": false }
+    },
+    "relations": [
+      { "name": "shift", "type": "many-to-one", "target": "Shift", "joinColumn": { "name": "turno_id", "referencedColumnName": "id_turno" }, "nullable": false },
+      { "name": "user", "type": "many-to-one", "target": "User", "joinColumn": { "name": "id_usuario", "referencedColumnName": "id_usuario" }, "nullable": false }
+    ]
+  },
+  {
+    "tableName": "Donors",
+    "columns": {
+      "donante_id": { "type": "int", "primary": true, "generated": true, "nullable": false },
+      "nombre": { "type": "varchar", "nullable": false },
+      "telefono": { "type": "varchar", "length": 20, "nullable": false, "unique": true },
+      "email": { "type": "varchar", "length": 255, "nullable": false, "unique": true },
+      "usuario_instagram": { "type": "varchar", "length": 255, "nullable": true, "unique": true }
+    },
+    "relations": [
+      { "name": "donation", "type": "one-to-many", "target": "Donation", "inverseSide": "donor", "nullable": true }
+    ]
+  },
+  {
+    "tableName": "Animals",
+    "columns": {
+      "id_animal": { "type": "int", "primary": true, "generated": true, "unique": true },
+      "nombre": { "type": "varchar", "length": 255, "nullable": false },
+      "sexo": { "type": "varchar", "length": 10, "nullable": false },
+      "especie": { "type": "varchar", "length": 255, "nullable": false },
+      "fecha_nacimiento": { "type": "varchar", "length": 255 },
+      "estado_salud_actual": { "type": "enum", "enum": ["SANO", "EN_TRATAMIENTO", "CRITICO"], "nullable": false },
+      "estado_adopcion": { "type": "enum", "enum": ["DISPONIBLE", "EN_PROCESO", "ADOPTADO", "NO_APTO"], "nullable": true },
+      "fallecido": { "type": "boolean", "nullable": true },
+      "fecha_fallecimiento": { "type": "varchar", "length": 255 },
+      "createdAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "nullable": false },
+      "updatedAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "onUpdate": "CURRENT_TIMESTAMP", "nullable": false }
+    },
+    "relations": [
+      { "name": "region", "type": "many-to-one", "target": "Region", "joinColumn": { "name": "region_id", "referencedColumnName": "id_region" }, "nullable": false },
+      { "name": "hospitalizations", "type": "one-to-many", "target": "Hospitalization", "inverseSide": "animal" },
+      { "name": "intakeRecords", "type": "one-to-many", "target": "IntakeRecord", "inverseSide": "animal" },
+      { "name": "vetCheckups", "type": "one-to-many", "target": "VetCheckup", "inverseSide": "animal" },
+      { "name": "exams", "type": "one-to-many", "target": "Exam", "inverseSide": "animal" },
+      { "name": "procedures", "type": "one-to-many", "target": "Procedure", "inverseSide": "animal" },
+      { "name": "foster_assignments", "type": "one-to-many", "target": "FosterAssignment", "inverseSide": "animal" }
+    ]
+  },
+  {
+    "tableName": "IntakeRecords",
+    "columns": {
+      "id_intake_record": { "type": "int", "primary": true, "generated": true },
+      "fecha_entrega": { "type": "varchar", "length": 255, "nullable": false },
+      "estado_reproduccion_inicial": { "type": "varchar", "length": 255, "nullable": false },
+      "edad_estimada": { "type": "varchar", "length": 255, "nullable": false },
+      "lugar_entrega": { "type": "varchar", "length": 255, "nullable": false },
+      "causa_entrega": { "type": "varchar", "length": 255, "nullable": false },
+      "condiciones_iniciales": { "type": "text", "nullable": false },
+      "nombre_quien_entrega": { "type": "varchar", "length": 255, "nullable": false },
+      "createdAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "nullable": false },
+      "updatedAt": { "type": "timestamp with time zone", "default": "CURRENT_TIMESTAMP", "onUpdate": "CURRENT_TIMESTAMP", "nullable": false }
+    },
+    "relations": [
+      { "name": "animal", "type": "many-to-one", "target": "Animal", "joinColumn": { "name": "id_animal", "referencedColumnName": "id_animal" }, "nullable": false },
+      { "name": "quien_recibe", "type": "many-to-one", "target": "User", "joinColumn": { "name": "id_quien_recibe", "referencedColumnName": "id_usuario" }, "nullable": false }
+    ]
+  },
+  {
+    "tableName": "InventoryItems",
+    "columns": {
+      "item_id": { "type": "int", "primary": true, "generated": true, "nullable": false },
+      "nombre": { "type": "varchar", "length": 255, "nullable": false },
+      "descripcion": { "type": "text", "nullable": true },
+      "stock_minimo": { "type": "int", "nullable": true },
+      "activo": { "type": "boolean", "default": true, "nullable": false }
+    },
+    "relations": [
+      { "name": "categoria", "type": "many-to-one", "target": "ItemCategory", "joinColumn": { "name": "categoria_item_id", "referencedColumnName": "categoria_item_id" } },
+      { "name": "unidad_medida", "type": "many-to-one", "target": "UnitOfMeasure", "joinColumn": { "name": "unidad_medida_id", "referencedColumnName": "unidad_medida_id" } }
+    ]
+  }
+]

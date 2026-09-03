@@ -1,0 +1,295 @@
+.files-section {
+  width: 100%;
+  min-width: 0;
+}
+
+.file-uploader,
+.attachment-list,
+.image-gallery {
+  min-width: 0;
+}
+
+.file-uploader-card {
+  display: grid;
+  gap: 14px;
+}
+
+.file-uploader-card-compact {
+  gap: 10px;
+}
+
+.file-uploader-header-compact {
+  margin-bottom: 0;
+}
+
+.file-uploader-header-compact h3 {
+  font-size: 1rem;
+}
+
+.file-uploader-grid-compact {
+  grid-template-columns: minmax(0, 180px) minmax(0, 1fr);
+  align-items: end;
+  gap: 10px 12px;
+}
+
+.file-uploader-input input[type="file"]:not(.file-trigger-button__input) {
+  width: 100%;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.file-uploader-visibility {
+  max-width: 180px;
+}
+
+.file-visibility-select {
+  min-height: 40px;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+}
+
+.files-inline-check {
+  align-content: start;
+}
+
+.file-pending-list {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f8fafc;
+  padding: 12px 14px;
+  color: var(--text);
+}
+
+.file-pending-list strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.file-pending-list ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 4px;
+}.attachment-list {
+  display: grid;
+  gap: 10px;
+}
+
+.attachment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+
+  padding: 16px 18px;
+
+  background: #fff;
+  border: 1px solid #e8ebef;
+  border-radius: 12px;
+
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.attachment-item:hover {
+  border-color: #d6dbe3;
+  background: #fafbfc;
+}
+
+.attachment-item-main {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.attachment-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.attachment-item-head strong {
+  color: #1f2937;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.attachment-item-badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.attachment-item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  color: #6b7280;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.image-gallery {
+  display: grid;
+  gap: 12px;
+}
+
+.image-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 220px);
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.image-gallery-grid-compact {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 220px));
+  justify-content: flex-start;
+}
+.image-gallery-card {
+  width: 220px;
+}
+
+
+.image-gallery-card-compact {
+  gap: 8px;
+}
+
+.image-gallery-card.is-main {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px rgba(109, 40, 217, 0.18);
+}
+
+.image-gallery-media {
+  width: 220px;
+  height: 220px;
+}
+
+.image-gallery-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-gallery-card-compact .image-gallery-media {
+  aspect-ratio: 1 / 1;
+  max-width: 220px;
+}
+
+.image-gallery-placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.image-gallery-body {
+  display: grid;
+  gap: 10px;
+  padding: 0 14px 14px;
+}
+
+.image-gallery-card-compact .image-gallery-body {
+  gap: 8px;
+  padding: 0 10px 10px;
+}
+
+.file-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 4px 9px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.file-badge-main {
+  background: #ecfdf5;
+  color: #15803d;
+}
+
+.file-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 720px) {
+  .file-uploader-grid-compact,
+  .attachment-item,
+  .attachment-item-head {
+    grid-template-columns: 1fr;
+  }
+
+  .attachment-item {
+    display: grid;
+  }
+
+  .attachment-item-badges,
+  .file-actions {
+    justify-content: flex-start;
+  }
+
+  .file-actions .btn {
+    flex: 1 1 160px;
+  }
+
+  .image-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   STANDARDIZATION LAYER
+   Shared visual rules. Component class names are unchanged.
+   ========================================================= */
+.file-uploader-card,
+.image-gallery-card,
+.attachment-list,
+.file-list-item {
+  border-color: var(--line);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.file-uploader-card input:not(.file-trigger-button__input),
+.file-uploader-card select {
+  min-height: var(--control-height);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.file-uploader-card input:not(.file-trigger-button__input):focus,
+.file-uploader-card select:focus {
+  border-color: var(--primary);
+  box-shadow: var(--focus-ring);
+  outline: none;
+}
+
+.file-actions .btn {
+  min-height: var(--control-height-sm);
+  border-radius: var(--radius-control);
+}

@@ -1,0 +1,475 @@
+.sponsorship-admin-page {
+  gap: 1.5rem;
+}
+
+.sponsorship-admin-header {
+  margin-bottom: 0.5rem;
+}
+
+.sponsorship-admin-global-error {
+  margin-top: -0.5rem;
+}
+
+.sponsorship-admin-tabs {
+  margin-bottom: 1rem;
+}
+
+.sponsorship-admin-settings-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sponsorship-admin-subtabs {
+  margin-bottom: 0;
+}
+
+.sponsorship-admin-card {
+  overflow: hidden;
+}
+
+.sponsorship-admin-card-header {
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.sponsorship-admin-subtle {
+  color: #5f6b7a;
+  margin: 0.25rem 0 0;
+}
+
+.sponsorship-admin-actions,
+.sponsorship-admin-row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.settings-filter-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(220px, 1.6fr) repeat(3, minmax(160px, 1fr));
+  align-items: end;
+}
+
+.inventory-filter-grid {
+  margin-bottom: 12px;
+}
+
+.settings-filter-field,
+.settings-form-field,
+.settings-checkbox-item {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.settings-filter-field span,
+.settings-form-field span,
+.settings-checkbox-caption,
+.settings-empty-note {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.settings-filter-field input,
+.settings-filter-field select,
+.settings-form-field input,
+.settings-form-field select,
+.settings-form-field textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  padding: 10px 12px;
+  outline: none;
+  color: var(--text);
+  font: inherit;
+}
+
+.settings-filter-field input:focus,
+.settings-filter-field select:focus,
+.settings-form-field input:focus,
+.settings-form-field select:focus,
+.settings-form-field textarea:focus {
+  border-color: var(--primary);
+}
+
+.settings-filter-grid .btn-clear {
+  align-self: end;
+  min-height: 42px;
+}
+
+.sponsorship-admin-form input,
+.sponsorship-admin-form select,
+.sponsorship-admin-form textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  padding: 10px 12px;
+  outline: none;
+  color: var(--text);
+  font: inherit;
+}
+
+.sponsorship-admin-form input:focus,
+.sponsorship-admin-form select:focus,
+.sponsorship-admin-form textarea:focus {
+  border-color: var(--primary);
+}
+
+.sponsorship-admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sponsorship-admin-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: #233043;
+}
+
+.sponsorship-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.sponsorship-admin-checkbox {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0.65rem !important;
+}
+
+.sponsorship-admin-checkbox input {
+  width: auto;
+}
+
+.sponsorship-admin-modal-overlay {
+  background: rgba(21, 29, 43, 0.55);
+}
+
+.sponsorship-admin-modal {
+  width: min(940px, calc(100vw - 2rem));
+  max-height: 92vh;
+  overflow: auto;
+}
+
+.sponsorship-admin-detail-modal {
+  width: min(1080px, calc(100vw - 2rem));
+}
+
+.sponsorship-admin-detail-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sponsorship-admin-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.sponsorship-admin-detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid #e1e6ee;
+  border-radius: 10px;
+  background: #fafbfd;
+}
+
+.sponsorship-admin-detail-row span {
+  color: #637085;
+  font-size: 0.86rem;
+}
+
+.sponsorship-admin-detail-hero {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.sponsorship-admin-detail-hero-compact {
+  grid-template-columns: 72px 1fr;
+}
+
+.sponsorship-admin-detail-hero img,
+.sponsorship-admin-animal-cell img,
+.sponsorship-admin-compact-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.sponsorship-admin-detail-hero img {
+  width: 140px;
+  height: 140px;
+}
+
+.sponsorship-admin-detail-hero-compact img {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+}
+
+.sponsorship-admin-animal-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sponsorship-admin-animal-cell img {
+  width: 48px;
+  height: 48px;
+}
+
+.sponsorship-admin-animal-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #eef2f8;
+  color: #607086;
+  font-size: 0.75rem;
+}
+
+.sponsorship-admin-animal-placeholder-large {
+  width: 72px;
+  height: 72px;
+}
+
+.sponsorship-admin-detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1rem;
+  border: 1px solid #e1e6ee;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.sponsorship-admin-detail-section h4 {
+  margin: 0;
+  color: #233043;
+}
+
+.sponsorship-admin-detail-section-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.sponsorship-admin-help {
+  color: #637085;
+  font-size: 0.82rem;
+  font-weight: 400;
+}
+
+.sponsorship-admin-compact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sponsorship-admin-compact-item {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 0.8rem;
+  border: 1px solid #e1e6ee;
+  border-radius: 12px;
+  background: #fafbfd;
+}
+
+.sponsorship-admin-compact-item img {
+  width: 56px;
+  height: 56px;
+}
+
+.sponsorship-admin-compact-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.sponsorship-admin-compact-item span {
+  color: #5f6b7a;
+  font-size: 0.9rem;
+}
+
+.sponsorship-admin-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.sponsorship-admin-badge-success {
+  background: #e2f4e7;
+  color: #1f6a35;
+}
+
+.sponsorship-admin-badge-warning {
+  background: #fff1d9;
+  color: #9a6200;
+}
+
+.sponsorship-admin-badge-danger {
+  background: #fde2e2;
+  color: #992f2f;
+}
+
+.sponsorship-admin-badge-neutral {
+  background: #edf1f6;
+  color: #4c5a6c;
+}
+
+.sponsorship-admin-settings-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 1080px) {
+  .settings-filter-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .sponsorship-admin-grid,
+  .sponsorship-admin-detail-grid,
+  .sponsorship-admin-detail-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsorship-admin-detail-hero img {
+    width: 100%;
+    max-width: 220px;
+    height: 220px;
+  }
+
+  .sponsorship-admin-detail-hero-compact img,
+  .sponsorship-admin-animal-placeholder-large {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+@media (max-width: 640px) {
+  .inventory-filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsorship-admin-card-header,
+  .sponsorship-admin-actions,
+  .sponsorship-admin-row-actions,
+  .sponsorship-admin-detail-section-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sponsorship-admin-compact-item {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsorship-admin-compact-item img {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+/* =========================================================
+   STANDARDIZATION LAYER
+   Shared visual rules. Component class names are unchanged.
+   ========================================================= */
+.sponsorship-admin-card,
+.sponsorship-admin-detail-row,
+.sponsorship-admin-detail-section {
+  border-color: var(--line);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.settings-filter-grid,
+.inventory-filter-grid {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  padding: 14px;
+}
+
+.settings-filter-field span,
+.settings-form-field span,
+.settings-checkbox-caption,
+.settings-empty-note,
+.sponsorship-admin-form label {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.settings-filter-field input,
+.settings-filter-field select,
+.settings-form-field input,
+.settings-form-field select,
+.settings-form-field textarea,
+.sponsorship-admin-form input,
+.sponsorship-admin-form select,
+.sponsorship-admin-form textarea {
+  min-height: var(--control-height);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-control);
+  padding: 9px 12px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.settings-filter-field input:focus,
+.settings-filter-field select:focus,
+.settings-form-field input:focus,
+.settings-form-field select:focus,
+.settings-form-field textarea:focus,
+.sponsorship-admin-form input:focus,
+.sponsorship-admin-form select:focus,
+.sponsorship-admin-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: var(--focus-ring);
+}
+
+.sponsorship-admin-modal-overlay {
+  background: var(--modal-overlay);
+  backdrop-filter: blur(5px);
+}
+
+.sponsorship-admin-modal,
+.sponsorship-admin-detail-modal {
+  max-height: calc(100dvh - 40px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-modal);
+  background: var(--surface);
+  box-shadow: var(--shadow-modal);
+}

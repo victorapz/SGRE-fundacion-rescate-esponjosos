@@ -1,0 +1,46 @@
+.app-layout {
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.app-main {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100vh;
+  max-width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+
+@media (max-width: 1080px) {
+  .app-layout {
+    display: block;
+    height: auto;
+    overflow: visible;
+  }
+
+  .app-main {
+    height: auto;
+    overflow: visible;
+  }
+}
+
+/* =========================================================
+   STANDARDIZATION LAYER
+   Shared visual rules. Component class names are unchanged.
+   ========================================================= */
+.app-layout,
+.app-main {
+  background: var(--bg);
+}
+
+.app-main {
+  scrollbar-gutter: stable;
+}

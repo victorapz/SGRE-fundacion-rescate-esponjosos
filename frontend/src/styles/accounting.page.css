@@ -1,0 +1,970 @@
+.accounting-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.accounting-summary-layout,
+.accounting-summary-grid,
+.accounting-parameter-grid,
+.accounting-filter-grid,
+.accounting-json-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.accounting-summary-grid,
+.accounting-parameter-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.accounting-parameter-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.accounting-kpi-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.accounting-kpi-card {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 247, 250, 0.98));
+}
+
+.accounting-kpi-card strong {
+  color: var(--text);
+}
+
+.accounting-card {
+  overflow: hidden;
+}
+
+.accounting-card-header {
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.accounting-actions,
+.accounting-row-actions,
+.accounting-mini-meta,
+.accounting-tabs,
+.accounting-subtabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.accounting-subtle {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.accounting-feedback {
+  border-radius: 16px;
+  padding: 14px 16px;
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+
+.accounting-feedback-info {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1d4ed8;
+}
+
+.accounting-feedback-success {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #047857;
+}
+
+.accounting-feedback-error {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.accounting-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  border: 1px solid transparent;
+}
+
+.accounting-badge-neutral {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+.accounting-badge-success {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #047857;
+}
+
+.accounting-badge-warning {
+  background: #fff7ed;
+  border-color: #fdba74;
+  color: #c2410c;
+}
+
+.accounting-badge-danger {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.accounting-badge-muted {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+.accounting-badge-info {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1d4ed8;
+}
+
+.accounting-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.accounting-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1160px;
+}
+
+.accounting-table th,
+.accounting-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  text-align: left;
+  vertical-align: top;
+}
+
+.accounting-table th {
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.accounting-table td strong {
+  color: var(--text);
+}
+
+.accounting-table-number {
+  text-align: right !important;
+  white-space: nowrap;
+}
+
+.accounting-url-cell {
+  max-width: 280px;
+  word-break: break-word;
+}
+
+.accounting-cell-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.accounting-cell-stack span,
+.accounting-cell-meta span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.accounting-cell-meta {
+  margin-top: 6px;
+}
+
+.accounting-mini-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accounting-mini-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: #f8fafc;
+}
+
+.accounting-mini-item p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.accounting-mini-meta {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.accounting-placeholder,
+.accounting-empty-state {
+  border: 1px dashed rgba(148, 163, 184, 0.55);
+ 
+}
+
+.accounting-inline-json,
+.accounting-json-block pre {
+  margin: 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--text);
+  color: var(--line);
+  font-size: 0.84rem;
+  line-height: 1.45;
+  overflow: auto;
+}
+
+.accounting-json-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accounting-json-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.accounting-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.58);
+  backdrop-filter: blur(6px);
+}
+
+.accounting-modal {
+  width: min(920px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  border-radius: 24px;
+  padding: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 252, 0.99));
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.24);
+}
+
+.accounting-modal-compact {
+  width: min(860px, 100%);
+}
+
+.accounting-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.accounting-modal-header h3 {
+  margin: 0;
+}
+
+.accounting-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.accounting-filter-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.accounting-tabs {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.accounting-subtabs {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.accounting-readonly-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.accounting-readonly-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: #f8fafc;
+}
+
+.accounting-readonly-card span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.accounting-readonly-card strong {
+  color: var(--text);
+}
+
+.accounting-readonly-card-compact {
+  padding: 12px 14px;
+}
+
+.accounting-advanced-panel {
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 16px;
+  padding: 14px 16px;
+  background: rgba(248, 250, 252, 0.92);
+}
+
+.accounting-advanced-panel summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #334155;
+}
+
+.accounting-advanced-panel[open] summary {
+  margin-bottom: 14px;
+}
+
+.accounting-field-error input,
+.accounting-field-error select,
+.accounting-field-error textarea {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.12);
+}
+
+.accounting-inline-error {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.accounting-field-disabled input,
+.accounting-field-disabled select,
+.accounting-field-disabled textarea {
+  background: #f8fafc;
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+.accounting-modal-kicker {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.accounting-payment-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accounting-payment-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.accounting-payment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}/* =========================================================
+   MODAL DETALLE DE DONACIÓN
+   ========================================================= */
+
+.accounting-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.52);
+  backdrop-filter: blur(3px);
+}
+
+.accounting-donation-detail-modal {
+  width: min(720px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid #dfe3e8;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.accounting-donation-detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.accounting-donation-detail-header h3 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.accounting-donation-detail-header span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.accounting-donation-detail-close {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid #dfe3e8;
+  border-radius: 9px;
+  background: #ffffff;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 150ms ease,
+    color 150ms ease,
+    border-color 150ms ease;
+}
+
+.accounting-donation-detail-close:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.accounting-donation-detail-close:focus-visible {
+  outline: 3px solid rgba(127, 81, 217, 0.18);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.accounting-donation-detail-content {
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+  padding: 0 22px;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.accounting-donation-detail-content::-webkit-scrollbar {
+  width: 7px;
+}
+
+.accounting-donation-detail-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.accounting-donation-detail-content::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #cbd5e1;
+}
+
+
+/* =========================================================
+   RESUMEN
+   ========================================================= */
+
+.accounting-donation-detail-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0;
+}
+
+.accounting-donation-detail-summary > div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.accounting-donation-detail-label {
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-weight: 600;
+}
+
+.accounting-donation-detail-amount {
+  color: #2f3747;
+  font-size: clamp(1.7rem, 4vw, 2.15rem);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accounting-donation-detail-date {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 0.77rem;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.accounting-donation-detail-section {
+  padding: 20px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.accounting-donation-detail-section h4 {
+  margin: 0 0 15px;
+  color: #334155;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.accounting-donation-detail-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.accounting-donation-detail-section-heading h4 {
+  margin: 0;
+}
+
+.accounting-donation-detail-section-heading > span {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   FILAS DE INFORMACIÓN
+   ========================================================= */
+
+.accounting-donation-detail-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.accounting-donation-detail-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.7fr) minmax(0, 1.3fr);
+  align-items: start;
+  gap: 24px;
+  padding: 9px 0;
+}
+
+.accounting-donation-detail-row > span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.accounting-donation-detail-row strong {
+  overflow-wrap: anywhere;
+  color: #334155;
+  font-size: 0.79rem;
+  font-weight: 650;
+  text-align: right;
+}
+
+.accounting-donation-detail-row code {
+  overflow-wrap: anywhere;
+  color: #475569;
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.73rem;
+  text-align: right;
+}
+
+
+/* =========================================================
+   HISTORIAL DE REEMBOLSOS
+   ========================================================= */
+
+.accounting-refund-history {
+  display: flex;
+  flex-direction: column;
+}
+
+.accounting-refund-history-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.6fr) minmax(0, 1.4fr);
+  gap: 24px;
+  padding: 13px 0;
+  border-bottom: 1px solid #eef1f4;
+}
+
+.accounting-refund-history-row:last-child {
+  border-bottom: 0;
+}
+
+.accounting-refund-history-row > div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 4px;
+}
+
+.accounting-refund-history-row > div:last-child {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.accounting-refund-history-row strong {
+  color: #334155;
+  font-size: 0.84rem;
+}
+
+.accounting-refund-history-row span {
+  color: var(--muted);
+  font-size: 0.73rem;
+  line-height: 1.4;
+}
+
+.accounting-refund-history-row code {
+  overflow-wrap: anywhere;
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   PIE
+   ========================================================= */
+
+.accounting-donation-detail-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 14px 22px;
+  border-top: 1px solid #e5e7eb;
+  background: #f8fafc;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .accounting-modal-overlay {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .accounting-donation-detail-modal {
+    max-height: calc(100vh - 24px);
+    border-radius: 15px;
+  }
+
+  .accounting-donation-detail-content {
+    max-height: calc(100vh - 170px);
+    padding-inline: 18px;
+  }
+
+  .accounting-donation-detail-header {
+    padding: 18px;
+  }
+
+  .accounting-donation-detail-footer {
+    padding-inline: 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .accounting-modal-overlay {
+    padding: 0;
+  }
+
+  .accounting-donation-detail-modal {
+    width: 100%;
+    max-height: 100vh;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .accounting-donation-detail-content {
+    max-height: calc(100vh - 165px);
+    padding-inline: 16px;
+  }
+
+  .accounting-donation-detail-summary {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .accounting-donation-detail-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .accounting-donation-detail-row strong,
+  .accounting-donation-detail-row code {
+    text-align: left;
+  }
+
+  .accounting-refund-history-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .accounting-refund-history-row > div:last-child {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+/* =========================================================
+   STANDARDIZATION LAYER
+   Shared visual rules. Component class names are unchanged.
+   ========================================================= */
+.accounting-card,
+.accounting-kpi-card,
+.accounting-readonly-card,
+.accounting-mini-item {
+  border-color: var(--line);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.accounting-modal-overlay {
+  z-index: 1200;
+  padding: 20px;
+  background: var(--modal-overlay);
+  backdrop-filter: blur(5px);
+}
+
+.accounting-modal,
+.accounting-donation-detail-modal {
+  max-height: calc(100dvh - 40px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-modal);
+  background: var(--surface);
+  box-shadow: var(--shadow-modal);
+}
+
+.accounting-modal {
+  padding: 20px;
+}
+
+.accounting-modal-header,
+.accounting-donation-detail-header {
+  align-items: flex-start;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.accounting-modal-header {
+  margin-bottom: 16px;
+}
+
+.accounting-filter-grid input,
+.accounting-filter-grid select,
+.accounting-filter-grid textarea {
+  min-height: var(--control-height);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-control);
+  padding: 9px 12px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.accounting-filter-grid input:focus,
+.accounting-filter-grid select:focus,
+.accounting-filter-grid textarea:focus {
+  border-color: var(--primary);
+  box-shadow: var(--focus-ring);
+  outline: none;
+}
+
+.accounting-table th {
+  background: var(--surface-muted);
+  color: var(--muted);
+}
+
+.accounting-table th,
+.accounting-table td {
+  border-bottom-color: var(--line);
+}
+
+@media (max-width: 720px) {
+  .accounting-modal-overlay { padding: 10px; }
+  .accounting-modal,
+  .accounting-donation-detail-modal { max-height: calc(100dvh - 20px); }
+}
+
+.accounting-currency-summary-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.accounting-currency-summary-note {
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  background: #eff6ff;
+  color: #1e3a8a;
+  border-radius: 16px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.accounting-currency-summary-card {
+  display: grid;
+  gap: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.accounting-currency-summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.accounting-summary-concept-grid {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  align-items: stretch;
+}
+
+.accounting-summary-concept-grid .accounting-kpi-card {
+  min-height: auto;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 14px 16px;
+}
+
+.accounting-summary-concept-grid .accounting-kpi-card > span:first-child {
+  margin-bottom: 2px;
+  font-size: 0.78rem;
+  line-height: 1.25;
+}
+
+.accounting-summary-currency-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.accounting-summary-currency-row {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 2px 8px;
+  min-width: 0;
+  padding: 5px 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.22);
+  background: transparent;
+}
+
+.accounting-summary-currency-row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.accounting-summary-currency-row:last-child {
+  padding-bottom: 0;
+}
+
+.accounting-summary-currency-code {
+  color: #000 !important;
+  font-size: 0.9rem !important;
+  font-weight: 750 !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.1 !important;
+  text-transform: uppercase;
+}
+
+.accounting-summary-currency-amount {
+  justify-self: end;
+  min-width: 0;
+  color: #000 !important;
+  font-size: 1rem !important;
+  font-weight: 750 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap;
+}
+
+.accounting-summary-currency-hint {
+  grid-column: 2 / -1;
+  justify-self: end;
+  margin-top: -2px;
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.accounting-summary-empty-text {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.accounting-filter-clear-row {
+  justify-content: flex-end;
+}
+

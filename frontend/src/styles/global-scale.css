@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  /* Brand and semantic colors */
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --surface-muted: #f8fafc;
+  --surface-hover: #f4f1fb;
+  --line: #e2e6ed;
+  --line-strong: #cbd5e1;
+  --text: #172033;
+  --text-soft: #334155;
+  --muted: #64748b;
+
+  --primary: #7f51d9;
+  --primary-hover: #6f43c9;
+  --primary-active: #6037b4;
+  --primary-soft: #f1ebff;
+  --primary-border: rgba(127, 81, 217, 0.30);
+
+  --success: #15803d;
+  --success-soft: #ecfdf3;
+  --warning: #b45309;
+  --warning-soft: #fff7ed;
+  --danger: #c93636;
+  --danger-hover: #b52d2d;
+  --danger-soft: #fff1f2;
+  --info: #2563eb;
+  --info-soft: #eff6ff;
+
+  /* Shape, spacing and elevation */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-control: 10px;
+  --radius-card: 14px;
+  --radius-modal: 16px;
+  --radius-pill: 999px;
+
+  --control-height: 42px;
+  --control-height-sm: 34px;
+  --control-height-lg: 48px;
+  --page-padding: 24px;
+
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.05);
+  --shadow-card-hover: 0 14px 32px rgba(15, 23, 42, 0.10);
+  --shadow-modal: 0 24px 72px rgba(15, 23, 42, 0.24);
+  --modal-overlay: rgba(15, 23, 42, 0.56);
+  --focus-ring: 0 0 0 3px rgba(127, 81, 217, 0.16);
+  --transition-fast: 160ms ease;
+
+  /* Compatibility aliases for legacy module styles */
+  --text-h: var(--text);
+  --border: var(--line);
+  --accent: var(--primary);
+  --accent-bg: var(--primary-soft);
+  --accent-border: var(--primary-border);
+  --shadow: var(--shadow-card);
+  --soft: var(--surface-muted);
+
+  /* Typography */
+  --font-family-base: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --page-title-size: clamp(1.8rem, 2.2vw, 2.6rem);
+  --page-title-line-height: 1.08;
+  --page-title-letter-spacing: -0.03em;
+  --page-subtitle-size: 1.2rem;
+  --page-subtitle-line-height: 1.5;
+  --page-subtitle-max-width: 62ch;
+  --page-title-gap: 12px;
+  --page-header-content-gap: 0px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 70%;
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+::selection {
+  background: var(--primary-soft);
+  color: var(--text);
+}
+
+@media (max-width: 720px) {
+  :root {
+    --page-padding: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+.detail-header-accent {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea decorativa superior para encabezados de detalle */
+.detail-header-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: var(--primary);
+}

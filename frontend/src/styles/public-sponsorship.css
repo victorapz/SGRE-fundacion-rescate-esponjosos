@@ -1,0 +1,541 @@
+.public-sponsorship-page,
+.public-sponsorship-detail-page {
+  display: grid;
+  gap: 24px;
+}
+
+.public-site--immersive .public-sponsorship-page .public-notices-hero h1,
+.public-site--immersive .public-sponsorship-detail__copy h1 {
+  color: #ffffff;
+}
+
+.public-site--immersive .public-sponsorship-detail__copy,
+.public-site--immersive .public-sponsorship-detail__copy .public-section-kicker,
+.public-site--immersive .public-sponsorship-detail__copy .public-sponsorship-detail__facts span {
+  color: #ffffff;
+}
+
+.public-site--immersive .public-sponsorship-detail__facts span {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.public-sponsorship-toolbar {
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(16px);
+}
+
+.public-sponsorship-search {
+  display: grid;
+  gap: 10px;
+}
+
+.public-sponsorship-search__label {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.public-sponsorship-search__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+}
+
+.public-sponsorship-search__row input,
+.public-sponsorship-field input {
+  min-height: 52px;
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--public-border);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0 16px;
+  color: var(--public-text);
+  font-size: 1rem;
+}
+
+.public-sponsorship-search__row input:focus-visible,
+.public-sponsorship-field input:focus-visible,
+.public-sponsorship-plan-card:focus-visible,
+.public-sponsorship-gallery__thumb:focus-visible {
+  outline: 2px solid #d7c0ff;
+  outline-offset: 3px;
+}
+
+.public-sponsorship-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.public-sponsorship-card,
+.public-sponsorship-copy-card,
+.public-sponsorship-cta-card,
+.public-sponsorship-result-card {
+  border-radius: 28px;
+  border: 1px solid rgba(98, 72, 146, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--public-shadow);
+}
+
+.public-sponsorship-card {
+  overflow: hidden;
+  display: grid;
+}
+
+.public-sponsorship-card__media {
+  aspect-ratio: 16 / 11;
+  background: linear-gradient(135deg, rgba(127, 81, 217, 0.16), rgba(249, 230, 242, 0.76));
+  position: relative;
+}
+
+.public-sponsorship-card__media img,
+.public-sponsorship-gallery__stage img,
+.public-sponsorship-gallery__thumb img,
+.public-sponsorship-result-card__animal img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.public-sponsorship-card__fallback,
+.public-sponsorship-gallery__placeholder,
+.public-sponsorship-result-card__animal-fallback {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: var(--public-primary-strong);
+  font-weight: 800;
+}
+
+.public-sponsorship-card__fallback span,
+.public-sponsorship-result-card__animal-fallback span {
+  width: 60px;
+  height: 60px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.78);
+  font-size: 1.5rem;
+}
+
+.public-sponsorship-card__body {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+}
+
+.public-sponsorship-card__copy h2,
+.public-sponsorship-detail__copy h1,
+.public-sponsorship-cta-card__header h2,
+.public-sponsorship-result-card h1 {
+  margin: 0;
+  letter-spacing: -0.04em;
+}
+
+.public-sponsorship-card__copy h2 {
+  color: var(--public-text);
+}
+
+.public-sponsorship-card__copy p,
+.public-sponsorship-card__copy small,
+.public-sponsorship-copy-card p,
+.public-sponsorship-cta-card__header p,
+.public-sponsorship-form__section-copy p,
+.public-sponsorship-form__actions p,
+.public-sponsorship-result-card p {
+  margin: 0;
+  color: var(--public-text-muted);
+  line-height: 1.68;
+}
+
+.public-sponsorship-card__copy p,
+.public-sponsorship-card__copy small,
+.public-sponsorship-rich-text,
+.public-sponsorship-result-card__animal span,
+.public-sponsorship-result-card__meta dt {
+  color: var(--public-text-muted);
+}
+
+.public-sponsorship-detail {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.public-sponsorship-detail__copy {
+  display: grid;
+  gap: 16px;
+}
+
+.public-sponsorship-detail__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.public-sponsorship-detail__facts span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(127, 81, 217, 0.1);
+  color: var(--public-primary-strong);
+  font-weight: 700;
+}
+
+.public-sponsorship-copy-card,
+.public-sponsorship-cta-card {
+  padding: 24px;
+  display: grid;
+  gap: 14px;
+}
+
+.public-sponsorship-copy-card {
+  color: var(--public-text);
+}
+
+.public-sponsorship-cta-card.public-glass-card {
+  color: var(--public-text);
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(98, 72, 146, 0.14);
+}
+
+.public-sponsorship-cta-card.public-glass-card .public-inline-alert {
+  background: rgba(176, 35, 35, 0.18);
+  color: #fff1f1;
+  border-color: rgba(255, 221, 221, 0.22);
+}
+
+.public-sponsorship-cta-card.public-glass-card h2,
+.public-sponsorship-cta-card.public-glass-card h3,
+.public-sponsorship-cta-card.public-glass-card strong,
+.public-sponsorship-cta-card.public-glass-card label,
+.public-sponsorship-cta-card.public-glass-card .public-sponsorship-field span,
+.public-sponsorship-cta-card.public-glass-card .public-sponsorship-form__section-copy h3,
+.public-sponsorship-cta-card.public-glass-card .public-sponsorship-form__summary strong,
+.public-sponsorship-cta-card.public-glass-card .public-sponsorship-consent strong {
+  color: var(--public-text);
+}
+
+.public-sponsorship-cta-card.public-glass-card p,
+.public-sponsorship-cta-card.public-glass-card small,
+.public-sponsorship-cta-card.public-glass-card .public-sponsorship-form__summary span,
+.public-sponsorship-cta-card.public-glass-card .public-sponsorship-consent small,
+.public-sponsorship-cta-card.public-glass-card .public-sponsorship-consent span {
+  color: var(--public-text-muted);
+}
+
+.public-sponsorship-copy-card h2,
+.public-sponsorship-form__section-copy h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--public-text);
+}
+
+.public-sponsorship-rich-text {
+  color: var(--public-text-muted);
+  line-height: 1.68;
+}
+
+.public-sponsorship-rich-text > :first-child {
+  margin-top: 0;
+}
+
+.public-sponsorship-rich-text > :last-child {
+  margin-bottom: 0;
+}
+
+.public-sponsorship-gallery {
+  display: grid;
+  gap: 12px;
+}
+
+.public-sponsorship-gallery__stage,
+.public-sponsorship-gallery__placeholder {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(98, 72, 146, 0.12);
+  box-shadow: var(--public-shadow);
+}
+
+.public-sponsorship-gallery__thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(74px, 1fr));
+  gap: 10px;
+}
+
+.public-sponsorship-gallery__thumb {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0;
+  cursor: pointer;
+}
+
+.public-sponsorship-gallery__thumb.is-active {
+  border-color: var(--public-primary);
+}
+
+.public-sponsorship-plan-selector,
+.public-sponsorship-form {
+  display: grid;
+  gap: 18px;
+}
+
+.public-sponsorship-plan-selector__grid,
+.public-sponsorship-form__grid {
+  display: grid;
+  gap: 14px;
+}
+
+.public-sponsorship-plan-card {
+  width: 100%;
+  padding: 18px;
+  text-align: left;
+  border-radius: 22px;
+  border: 1px solid var(--public-border);
+  background: rgba(255, 255, 255, 0.94);
+  display: grid;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.public-sponsorship-plan-card strong,
+.public-sponsorship-plan-card__head span,
+.public-sponsorship-form__summary strong,
+.public-sponsorship-field span,
+.public-sponsorship-consent strong {
+  color: var(--public-text);
+}
+
+.public-sponsorship-plan-card.is-selected {
+  border-width: 2px;
+  border-color: var(--public-primary);
+  background: rgba(239, 232, 255, 0.96);
+}
+
+.public-inline-spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.24);
+  border-top-color: #ffffff;
+  display: inline-block;
+  animation: sponsorship-spin 0.9s linear infinite;
+}
+
+.public-sponsorship-plan-card__head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.public-sponsorship-plan-card__head strong {
+  font-size: 1.04rem;
+}
+
+.public-sponsorship-plan-card p,
+.public-sponsorship-plan-card small,
+.public-sponsorship-form__summary span,
+.public-sponsorship-consent small {
+  color: var(--public-text-muted);
+  line-height: 1.55;
+}
+
+.public-sponsorship-field {
+  display: grid;
+  gap: 8px;
+}
+
+.public-sponsorship-field span,
+.public-sponsorship-form__summary strong {
+  font-weight: 800;
+}
+
+.public-sponsorship-field small,
+.public-sponsorship-form__summary small,
+.public-sponsorship-form__error-line {
+  margin: 0;
+  color: #a62635;
+  font-size: 0.9rem;
+}
+
+.public-sponsorship-form__section {
+  display: grid;
+  gap: 16px;
+}
+
+.public-sponsorship-form__grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.public-sponsorship-form__summary {
+  display: grid;
+  gap: 6px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(127, 81, 217, 0.08);
+}
+
+.public-sponsorship-consent {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--public-border);
+}
+
+.public-sponsorship-consent input {
+  width: 18px;
+  height: 18px;
+  margin-top: 4px;
+  accent-color: var(--public-primary);
+}
+
+.public-sponsorship-consent span {
+  display: grid;
+  gap: 6px;
+}
+
+.public-sponsorship-form__actions {
+  display: grid;
+  gap: 10px;
+}
+
+.public-sponsorship-result-card {
+  padding: 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.public-sponsorship-result-shell .public-sponsorship-result-card__meta div,
+.public-sponsorship-result-shell .public-sponsorship-result-card__summary {
+  text-align: left;
+}
+
+.public-sponsorship-result-card__summary,
+.public-sponsorship-result-card__meta {
+  display: grid;
+  gap: 16px;
+}
+
+.public-sponsorship-result-card__animal {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+}
+
+.public-sponsorship-result-card__animal img,
+.public-sponsorship-result-card__animal-fallback {
+  width: 92px;
+  height: 92px;
+  border-radius: 22px;
+}
+
+.public-sponsorship-result-card__animal strong,
+.public-sponsorship-result-card__meta dd {
+  display: block;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.public-sponsorship-result-card__animal span,
+.public-sponsorship-result-card__meta dt {
+  color: var(--public-text-muted);
+}
+
+.public-sponsorship-result-card__meta {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.public-sponsorship-result-card__meta div {
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(127, 81, 217, 0.08);
+}
+
+.public-sponsorship-result-card__meta dd {
+  margin: 6px 0 0;
+}
+
+@media (max-width: 960px) {
+  .public-sponsorship-grid,
+  .public-sponsorship-detail {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .public-sponsorship-search__row,
+  .public-sponsorship-form__grid,
+  .public-sponsorship-result-card__meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes sponsorship-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   STANDARDIZATION LAYER
+   Shared visual rules. Component class names are unchanged.
+   ========================================================= */
+.public-sponsorship-toolbar,
+.public-sponsorship-card,
+.public-sponsorship-copy-card,
+.public-sponsorship-cta-card,
+.public-sponsorship-result-card,
+.public-sponsorship-plan-card,
+.public-sponsorship-form__section,
+.public-sponsorship-form__summary {
+  border-radius: var(--radius-card);
+  border-color: var(--line);
+  box-shadow: var(--shadow-card);
+}
+
+.public-sponsorship-field input,
+.public-sponsorship-field select,
+.public-sponsorship-field textarea,
+.public-sponsorship-search__row input {
+  min-height: var(--control-height-lg);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-control);
+  color: var(--public-text);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.public-sponsorship-field input::placeholder,
+.public-sponsorship-field textarea::placeholder,
+.public-sponsorship-search__row input::placeholder {
+  color: #7a728a;
+}
+
+.public-sponsorship-field input:focus-visible,
+.public-sponsorship-field select:focus-visible,
+.public-sponsorship-field textarea:focus-visible,
+.public-sponsorship-search__row input:focus-visible {
+  border-color: var(--primary);
+  box-shadow: var(--focus-ring);
+  outline: none;
+}
+
+.public-sponsorship-plan-card.is-selected {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}

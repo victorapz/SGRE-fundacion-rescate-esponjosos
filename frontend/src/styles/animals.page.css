@@ -1,0 +1,1229 @@
+.animals-page .crud-table {
+  min-width: 760px;
+}
+
+.animals-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.animal-header-card {
+  margin-top: 10px;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.animal-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.animal-header-info {
+  flex: 1;
+  min-width: 240px;
+  text-align: left;
+}
+
+.animal-header-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.animal-header-title h2 {
+  margin: 0;
+}
+
+.animal-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.animal-subtitle {
+  margin-top: 8px;
+  color: var(--text);
+}
+
+.animal-meta-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.animal-meta-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.animal-meta-value {
+  display: block;
+  margin-top: 4px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.animal-header-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.animal-summary-card {
+  margin-top: 10px;
+  padding: 22px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  display: flex;
+  align-items: stretch;
+  gap: 22px;
+}
+
+.animal-summary-media {
+  flex: 0 0 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.animal-summary-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 28px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.24), transparent 55%),
+    linear-gradient(160deg, var(--accent-bg), rgba(15, 118, 110, 0.16));
+  border: 1px solid rgba(15, 118, 110, 0.12);
+  display: grid;
+  place-items: center;
+}
+
+.animal-summary-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.animal-summary-photo-note {
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.animal-summary-photo-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.animal-summary-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.animal-summary-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.animal-summary-heading {
+  min-width: 0;
+}
+
+.animal-summary-title {
+  margin: 0;
+  font-size: clamp(1.8rem, 2vw, 2.35rem);
+  line-height: 1.1;
+  color: var(--text-h);
+}
+
+.animal-summary-species {
+  margin: 8px 0 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.animal-summary-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+}
+
+.animal-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  /*grid-template-columns: repeat(5, minmax(0, 1fr));*/
+    /*grid-template-columns: repeat(3, 180px);*/
+  gap: 6px;
+}
+
+.animal-summary-item {
+  min-width: 0;
+  padding: 14px 16px;
+  background: var(--soft);
+  display: grid;
+  gap: 6px;
+}
+
+.animal-summary-item-label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.animal-summary-item-value {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-h);
+  word-break: break-word;
+}
+
+.animal-summary-mobile-actions {
+  display: none;
+}
+
+.animal-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.animal-subtabs {
+  display: flex;
+  gap: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+
+.animal-muted {
+  color: var(--muted);
+  text-align: left;
+}
+
+.animal-card-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.animal-profile-content {
+  display: grid;
+  gap: 16px;
+}
+
+.animal-profile-block {
+  display: grid;
+  gap: 6px;
+}
+
+.animal-profile-lists {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.animal-history {
+  margin: 6px 0 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.animal-bullet-list {
+  margin: 6px 0 0 18px;
+  padding: 0;
+  color: var(--text);
+}
+
+.animal-bullet-list li {
+  margin-bottom: 4px;
+}
+
+.animal-accordion {
+  margin-top: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.animal-accordion summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.animal-history-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.animal-history-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  background: var(--surface);
+  display: grid;
+  gap: 8px;
+}
+
+.animal-intake-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.animal-form-block {
+  display: grid;
+  gap: 8px;
+}
+
+.animal-form-block.full {
+  grid-column: 1 / -1;
+}
+
+.crud-form-grid label.full {
+  grid-column: 1 / -1;
+}
+
+.animal-form-label {
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.animal-history-input {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.animal-compact-textarea {
+  min-height: 112px;
+}
+
+.animal-list-entry {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.animal-list-entry input {
+  flex: 1;
+  min-width: 0;
+}
+
+.animal-add-chip-button {
+  flex-shrink: 0;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.animal-scroll-modal {
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.animal-modal-wide {
+  width: min(920px, 100%);
+}
+
+.animal-scroll-modal .event-modal-header {
+  flex-shrink: 0;
+}
+
+.animal-scroll-form {
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.animal-scroll-form .event-modal-actions {
+  position: sticky;
+  bottom: 0;
+  background: var(--surface);
+  padding-top: 12px;
+  margin-top: 8px;
+  border-top: 1px solid var(--line);
+  z-index: 1;
+}
+
+.animal-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.animal-edit-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d9ccff;
+  background: #f4efff;
+  color: #4c2e90;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  max-width: 100%;
+  text-align: left;
+}
+
+.animal-edit-chip span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.animal-edit-chip-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: rgba(127, 81, 217, 0.16);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.animal-list-hint {
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.animal-rich-text-field {
+  grid-column: 1 / -1;
+}
+
+.animal-rich-text-field .notice-editor-content {
+  min-height: 140px;
+}
+
+.animal-rich-text-field .notice-editor-content .ProseMirror {
+  min-height: 110px;
+}
+
+.animal-rich-text-read {
+  overflow-wrap: anywhere;
+}
+
+.animal-rich-text-read p:first-child,
+.animal-rich-text-read ul:first-child,
+.animal-rich-text-read ol:first-child {
+  margin-top: 0;
+}
+
+.animal-rich-text-read p:last-child,
+.animal-rich-text-read ul:last-child,
+.animal-rich-text-read ol:last-child {
+  margin-bottom: 0;
+}
+
+.animal-history-table {
+  min-width: 760px;
+  table-layout: fixed;
+}
+
+.animal-history-table th:last-child,
+.animal-history-table td:last-child {
+  width: 220px;
+}
+
+.animal-history-table .row-actions {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.animal-table-cell-truncate {
+  max-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.animal-detail-modal {
+  width: min(960px, 100%);
+}
+
+.animal-detail-content {
+  min-height: 0;
+  overflow-y: auto;
+  display: grid;
+  gap: 14px;
+  padding-right: 4px;
+}
+
+.animal-detail-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.animal-detail-item,
+.animal-detail-richtext {
+  display: grid;
+  gap: 6px;
+}
+
+.animal-media-section {
+  display: grid;
+  gap: 18px;
+}
+
+.animal-media-header {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .animal-header-card {
+    flex-direction: column;
+  }
+
+  .animal-header-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .animal-summary-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .animal-summary-media {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .animal-summary-content {
+    width: 100%;
+  }
+
+  .animal-summary-head {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .animal-summary-actions {
+    display: none;
+  }
+
+  .animal-summary-mobile-actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .animal-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .animal-list-entry {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .animal-add-chip-button {
+    width: 100%;
+  }
+
+  .animal-card-actions {
+    width: 100%;
+  }
+
+  .animal-card-actions .btn {
+    flex: 1;
+  }
+
+  .animal-history-table th:last-child,
+  .animal-history-table td:last-child {
+    width: 240px;
+  }
+}
+
+@media (max-width: 620px) {
+  .animal-summary-photo {
+    width: 124px;
+    height: 124px;
+    border-radius: 24px;
+  }
+
+  .animal-summary-photo-placeholder {
+    font-size: 3rem;
+  }
+
+  .animal-summary-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .animal-summary-item {
+    padding: 13px 14px;
+  }
+}
+
+/* =========================================================
+   STANDARDIZATION LAYER
+   Shared visual rules. Component class names are unchanged.
+   ========================================================= */
+.animal-header-card,
+.animal-summary-card,
+.animal-form-block {
+  border-color: var(--line);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.animal-add-chip-button {
+  min-height: var(--control-height);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-control);
+  padding: 0 13px;
+  background: var(--surface);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.animal-add-chip-button:hover {
+  border-color: var(--primary-border);
+  background: var(--primary-soft);
+}
+
+.animal-scroll-modal,
+.animal-modal-wide,
+.animal-detail-modal {
+  max-height: calc(100dvh - 40px);
+  border-radius: var(--radius-modal);
+}
+
+.animal-form-label {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.animal-history-table th {
+  background: var(--surface-muted);
+  color: var(--muted);
+}
+
+.animal-inline-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.animal-inline-checkbox input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  flex: 0 0 auto;
+}
+
+/* =========================================================
+   CLINICAL FORM PAGE
+   Single-scroll page layout, flat fields and Tiptap editor.
+   ========================================================= */
+
+.clinical-form-page {
+  width: min(100%, 1280px);
+  min-height: 0;
+  margin: 0 auto;
+  padding-right: clamp(18px, 3vw, 36px);
+  padding-bottom: 36px;
+  padding-left: clamp(18px, 3vw, 36px);
+  box-sizing: border-box;
+}
+
+.clinical-page-actions {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 12px 0 22px;
+}
+
+.clinical-page-actions h1 {
+  margin: 0;
+  color: var(--text-h);
+}
+
+.clinical-page-copy {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.clinical-page-actions-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.clinical-save-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.clinical-page-message {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+  padding: 18px 0;
+}
+
+.clinical-form {
+  display: grid;
+  gap: 0;
+  min-height: 0;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.clinical-form-error {
+  margin: 0 0 18px;
+}
+
+.clinical-form-section {
+  display: grid;
+  gap: 16px;
+  padding: 0 0 24px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.clinical-form-section-separated {
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.clinical-section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.clinical-section-heading h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text-h);
+}
+
+.clinical-section-heading p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.clinical-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 18px;
+  align-items: start;
+}
+
+.clinical-field,
+.clinical-rich-text-field {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.clinical-field-full,
+.clinical-rich-text-field {
+  grid-column: 1 / -1;
+}
+
+.clinical-field-label {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.clinical-required-mark {
+  color: var(--danger, #b42318);
+}
+
+.clinical-field input,
+.clinical-field select,
+.clinical-field textarea,
+.clinical-form-page .animal-form-block input,
+.clinical-form-page .animal-form-block select,
+.clinical-form-page .animal-form-block textarea {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  padding: 10px 12px;
+  color: var(--text);
+  font: inherit;
+  outline: none;
+  box-shadow: none;
+}
+
+.clinical-field textarea {
+  resize: vertical;
+}
+
+.clinical-field input:focus,
+.clinical-field select:focus,
+.clinical-field textarea:focus,
+.clinical-form-page .animal-form-block input:focus,
+.clinical-form-page .animal-form-block select:focus,
+.clinical-form-page .animal-form-block textarea:focus {
+  border-color: var(--primary);
+  box-shadow: none;
+}
+
+.clinical-field input:disabled,
+.clinical-field select:disabled,
+.clinical-field textarea:disabled {
+  cursor: not-allowed;
+  background: var(--surface-muted);
+  color: var(--muted);
+}
+
+.clinical-field-help {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.clinical-form-page .animal-form-block,
+.clinical-form-page .crud-form-grid label,
+.clinical-form-page label.animal-form-block {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.clinical-form-page .animal-form-label {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.clinical-rich-text-shell {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: none;
+}
+
+.clinical-rich-text-shell:focus-within {
+  border-color: var(--primary);
+}
+
+.clinical-editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 42px;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-muted);
+  flex-wrap: wrap;
+}
+
+.clinical-editor-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.clinical-editor-button:hover:not(:disabled),
+.clinical-editor-button.is-active {
+  border-color: var(--line);
+  background: var(--surface);
+  color: var(--primary);
+}
+
+.clinical-editor-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.clinical-editor-toolbar-separator {
+  width: 1px;
+  height: 22px;
+  margin: 0 4px;
+  background: var(--line);
+}
+.clinical-form-page .clinical-editor-content {
+  width: 100%;
+  min-height: 138px;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  background: var(--surface);
+}
+
+.clinical-form-page .clinical-editor-content .ProseMirror {
+  width: 100%;
+  min-height: 138px;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  outline: none;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.clinical-editor-content .ProseMirror p:first-child,
+.clinical-editor-content .ProseMirror ul:first-child,
+.clinical-editor-content .ProseMirror ol:first-child {
+  margin-top: 0;
+}
+
+.clinical-editor-content .ProseMirror p:last-child,
+.clinical-editor-content .ProseMirror ul:last-child,
+.clinical-editor-content .ProseMirror ol:last-child {
+  margin-bottom: 0;
+}
+
+.clinical-responsible-row {
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+}
+
+.clinical-responsible-row strong {
+  color: var(--text-h);
+}
+
+.clinical-inline-checkbox {
+  justify-self: start;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.clinical-inline-checkbox input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.clinical-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 900px) {
+  .clinical-page-actions {
+    flex-direction: column;
+  }
+
+  .clinical-page-actions-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .clinical-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .clinical-field-full,
+  .clinical-rich-text-field {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .clinical-form-page {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .clinical-page-actions-right,
+  .clinical-form-footer {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .clinical-page-actions-right .btn,
+  .clinical-form-footer .btn {
+    width: 100%;
+  }
+
+  .clinical-editor-toolbar {
+    gap: 2px;
+  }
+}
+
+.clinical-form-page .clinical-form {
+  display: grid;
+  gap: 0;
+  min-height: 0;
+  max-height: none;
+  height: auto;
+  overflow: visible;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.clinical-form-page .clinical-rich-text-shell {
+  height: auto;
+  max-height: none;
+}
+
+
+/* =========================================================
+   CLINICAL ROUTE SCROLL
+   Mantiene app-main como único scroll visible del contenido.
+   Se aplica solo a las cuatro páginas clínicas.
+   ========================================================= */
+
+@media (min-width: 1081px) {
+  /*
+   * Evita que html, body o #root creen una barra adicional
+   * mientras una página clínica está activa.
+   */
+  html:has(.clinical-scroll-page),
+  body:has(.clinical-scroll-page),
+  #root:has(.clinical-scroll-page) {
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  /*
+   * Conserva el shell fijo. No se permite que el documento
+   * crezca debajo del sidebar.
+   */
+  .app-layout:has(.clinical-scroll-page) {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  /*
+   * Este queda como el único contenedor de desplazamiento
+   * visible para el contenido clínico.
+   */
+  .app-layout:has(.clinical-scroll-page) .app-main {
+    height: 100%;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-gutter: auto;
+  }
+
+  /*
+   * El sidebar conserva desplazamiento mediante rueda,
+   * trackpad o teclado, pero no muestra otra barra.
+   */
+  .app-layout:has(.clinical-scroll-page) .sidebar {
+    height: 100%;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .app-layout:has(.clinical-scroll-page) .sidebar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  /*
+   * .main-content tiene overflow-x: hidden globalmente.
+   * Esa combinación hace que overflow-y se calcule como auto.
+   *
+   * clip evita el desbordamiento horizontal sin convertir
+   * la página clínica en otro scroll container.
+   */
+  .clinical-scroll-page {
+    min-height: 100%;
+    height: auto;
+    max-height: none;
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+
+  /*
+   * Los formularios y cards deben crecer dentro de app-main,
+   * no desplazarse internamente.
+   */
+  .clinical-scroll-page form,
+  .clinical-scroll-page .crud-card,
+  .clinical-scroll-page .clinical-form-surface {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  /*
+   * Hospitalization, Procedure y VetCheckup reutilizan una
+   * clase de tareas que tiene position: sticky.
+   */
+  .clinical-scroll-page .create-actions-card {
+    position: static;
+    bottom: auto;
+  }
+}
+
+.clinical-attachments-section {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.clinical-attachments-content {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
+.clinical-attachments-section .files-section {
+  min-width: 0;
+}
+
+.clinical-attachments-section .file-uploader-card {
+  gap: 12px;
+  padding: 16px;
+  border: 1px dashed var(--line-strong);
+  border-radius: 12px;
+  background: var(--surface-muted);
+}
+
+.clinical-attachments-section .file-uploader-grid-compact {
+  display: block;
+}
+
+.clinical-attachments-section .file-uploader-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.clinical-attachments-section .file-uploader-input > span {
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.clinical-attachments-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.clinical-attachments-status strong {
+  color: var(--text-h);
+  font-size: 0.88rem;
+}
+
+.clinical-attachments-status span,
+.clinical-attachments-help {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.clinical-attachments-help {
+  margin: -4px 0 0;
+}
+
+.clinical-attachments-warning {
+  margin: 0;
+}
+
+@media (max-width: 620px) {
+  .clinical-attachments-section .file-uploader-input,
+  .clinical-attachments-status {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

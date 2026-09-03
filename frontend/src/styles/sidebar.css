@@ -1,0 +1,218 @@
+.sidebar {
+  border-right: 1px solid var(--line);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  min-width: 260px;
+  max-width: 260px;
+  flex: 0 0 260px;
+  flex-shrink: 0;
+  padding: 20px 16px;
+  height: 100vh;
+  min-height: 0;
+  font-family: var(--font-family-base);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-brand {
+  margin-bottom: 20px;
+}
+
+.sidebar-logo {
+  display: block;
+  width: 100%;
+  max-width: 108px;
+  height: auto;
+  object-fit: contain;
+  margin-inline: auto;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.menu-item {
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #334155;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 120ms ease, color 120ms ease;
+  text-decoration: none;
+}
+
+.menu-item-icon {
+  flex: 0 0 auto;
+}
+
+.menu-item-label {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.menu-item:hover {
+  background: #f1f5f9;
+  color: var(--text);
+}
+
+.menu-item-active {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.sidebar-empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 8px 2px;
+}
+.profile-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 36px;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+  padding: 12px;
+
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+}
+
+.profile-card-main {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+  border-radius: calc(var(--radius-card) - 2px);
+  padding: 0;
+}
+
+.profile-card-main:hover {
+  text-decoration: none;
+}
+
+.profile-card-main:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.16);
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  color: var(--primary);
+  background: var(--primary-soft);
+  border: 1px solid var(--primary-border);
+  border-radius: 50%;
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+
+  user-select: none;
+}
+
+.profile-content {
+  min-width: 0;
+  overflow: hidden;
+}
+
+
+.profile-name,
+.profile-role {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-name {
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.profile-role {
+  margin-top: 2px;
+
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+.logout-btn {
+  justify-self: end;
+  flex: none;
+
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+  min-height: 36px;
+  padding: 0;
+
+  color: var(--muted);
+  background: var(--surface);
+  border-color: var(--line-strong);
+}
+
+.logout-btn:hover:not(:disabled) {
+  color: var(--text-soft);
+  background: var(--surface-hover);
+  border-color: var(--line-strong);
+}
+
+.logout-btn:focus-visible {
+  border-color: var(--text-soft);
+  box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.16);
+}
+
+.logout-btn:active:not(:disabled) {
+  color: var(--text);
+  background: var(--surface-muted);
+  transform: translateY(1px);
+}
+
+@media (max-width: 1080px) {
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    flex: 0 0 auto;
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .profile-card {
+    max-width: 360px;
+  }
+}
+/* =========================================================
+   STANDARDIZATION LAYER
+   Shared visual rules. Component class names are unchanged.
+   ========================================================= */
+.sidebar {
+  background: var(--surface);
+  border-color: var(--line);
+}

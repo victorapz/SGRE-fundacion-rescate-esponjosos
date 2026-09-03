@@ -1,0 +1,39 @@
+"use strict";
+
+export const REPORT_TIME_ZONE = "America/Santiago";
+
+export const REPORT_PREVIEW_DEFAULT_LIMIT = 50;
+export const REPORT_PREVIEW_MAX_LIMIT = 200;
+
+export const REPORT_DEFAULT_DATE_RANGE_DAYS = 30;
+export const REPORT_MAX_DATE_RANGE_DAYS = 366;
+
+export const REPORT_EXPORT_DEFAULT_MAX_ROWS = 10000;
+export const REPORT_INVENTORY_EXPORT_MAX_ROWS = 20000;
+
+export const REPORT_FORMATS = ["pdf", "xlsx"];
+export const REPORT_SUPPORTED_CURRENCIES = ["CLP", "USD", "EUR"];
+
+export const REPORT_FIELD_TYPES = {
+  DATE: "date",
+  TIMESTAMP: "timestamp",
+};
+
+export const REPORT_TYPES = {
+  ACCOUNTING_TRANSACTIONS: "ACCOUNTING_TRANSACTIONS",
+  ACCOUNTING_PAYABLES: "ACCOUNTING_PAYABLES",
+  INVENTORY_EXISTENCES: "INVENTORY_EXISTENCES",
+  INVENTORY_COUNTS_ADJUSTMENTS: "INVENTORY_COUNTS_ADJUSTMENTS",
+};
+
+export const REPORT_EXPORT_PERMISSIONS = {
+  ACCOUNTING: "accounting:report:export",
+  INVENTORY: "inventory:report:export",
+};
+
+export const REPORT_DATASET_RULES = {
+  ACCOUNTING_TRANSACTIONS: "Transaction",
+  ACCOUNTING_PAYABLES: "PayableAccount",
+  INVENTORY_EXISTENCES: "InventoryItemLocationAggregate",
+  INVENTORY_COUNTS_ADJUSTMENTS: "StockCountAndInventoryAdjustment",
+};

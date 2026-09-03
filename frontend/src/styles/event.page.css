@@ -1,0 +1,382 @@
+.event-modal-large {
+  width: min(820px, 100%);
+  padding: 0;
+  overflow: hidden;
+  max-height: min(90vh, 820px);
+  display: flex;
+  flex-direction: column;
+}
+
+.events-calendar-shell {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.events-calendar-header {
+  display: grid;
+  gap: 12px;
+}
+
+.events-calendar-toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.events-calendar-toolbar .event-filters {
+  flex: 1 1 520px;
+    max-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.events-create-button {
+  flex: 0 0 auto;
+}
+
+.calendar-card-full {
+  width: 100%;
+  max-width: 100%;
+}
+
+.calendar-wrap-large .fc {
+  min-height: 680px;
+}
+
+.event-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 20px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.event-modal-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.event-modal-header p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.modal-close-button {
+  border: 0;
+  background: transparent;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0;
+}
+
+.event-modal-form {
+  padding: 18px 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  overflow-y: auto;
+}
+
+.form-field {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+
+.event-modal-form .full {
+  grid-column: 1 / -1;
+}
+
+.form-field span {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.event-modal-form input,
+.event-modal-form select,
+.event-modal-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  padding: 11px 12px;
+  outline: none;
+  font: inherit;
+  color: var(--text);
+}
+
+.event-modal-form input:focus,
+.event-modal-form select:focus,
+.event-modal-form textarea:focus {
+  border-color: var(--primary);
+}
+
+.event-modal-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.event-toggle-field {
+  align-content: end;
+}
+
+.event-toggle-input {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 11px 12px;
+  background: #fff;
+}
+
+.event-toggle-input input {
+  width: auto;
+  margin: 0;
+}
+
+.event-form-hint {
+  align-content: end;
+}
+
+.event-form-hint p {
+  margin: 0;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.event-category-badge {
+  color: #fff;
+  text-transform: none;
+}
+.fc .fc-event.event-category-fundraising,
+.event-category-fundraising {
+  background: #6d28d9;
+  border-color: #581c87;
+  color: #fff;
+}
+
+.fc .fc-event.event-category-educational,
+.event-category-educational {
+  background: #9333ea;
+  border-color: #7e22ce;
+  color: #fff;
+}
+
+.fc .fc-event.event-category-community,
+.event-category-community {
+  background: #c026d3;
+  border-color: #a21caf;
+  color: #fff;
+}
+
+.fc .fc-event.event-category-institutional,
+.event-category-institutional {
+  background: #db2777;
+  border-color: #be185d;
+  color: #fff;
+}
+
+.fc .fc-event.event-category-cultural,
+.event-category-cultural {
+  background: var(--danger);
+  border-color: #b91c1c;
+  color: #fff;
+}
+.fc .fc-event.fc-event-selected {
+  box-shadow: 0 0 0 2px #f8fafc inset, 0 0 0 4px rgba(15, 23, 42, 0.22);
+}
+
+.event-detail-modal {
+  width: min(720px, 100%);
+  max-height: min(88vh, 760px);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.event-detail-body {
+  padding: 18px 20px 20px;
+  overflow-y: auto;
+  display: grid;
+  gap: 18px;
+}
+
+.event-detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.event-detail-status {
+  border-radius: 999px;
+  background: var(--line);
+  color: #334155;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.event-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.event-detail-field {
+  display: grid;
+  gap: 6px;
+}
+
+.event-detail-field span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.event-detail-field strong,
+.event-detail-field p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.event-detail-field-full {
+  grid-column: 1 / -1;
+}
+
+.event-modal-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 6px;
+  margin-top: 6px;
+  border-top: 1px solid #eef2f7;
+}
+
+@media (max-width: 720px) {
+  .events-calendar-toolbar {
+    align-items: stretch;
+  }
+
+  .events-calendar-toolbar .event-filters,
+  .events-create-button {
+    flex: 1 1 100%;
+  }
+
+  .calendar-wrap-large .fc {
+    min-height: 560px;
+  }
+
+  .event-detail-grid,
+  .event-modal-form {
+    grid-template-columns: 1fr;
+  }
+
+  .event-modal-actions {
+    flex-direction: column;
+  }
+
+  .event-modal-actions .btn {
+    width: 100%;
+  }
+
+  .event-modal-header {
+    padding: 16px;
+  }
+
+  .event-modal-form {
+    padding: 16px;
+  }
+}
+
+/* =========================================================
+   STANDARDIZATION LAYER
+   Shared visual rules. Component class names are unchanged.
+   ========================================================= */
+.events-calendar-toolbar {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  padding: 14px;
+}
+
+.events-create-button {
+  min-height: var(--control-height);
+  border-radius: var(--radius-control);
+}
+
+.event-modal-large,
+.event-detail-modal {
+  border-radius: var(--radius-modal);
+}
+
+.event-modal-header {
+  align-items: flex-start;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.modal-close-button {
+  width: var(--control-height);
+  height: var(--control-height);
+  min-width: var(--control-height);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  color: var(--muted);
+}
+
+.modal-close-button:hover {
+  background: var(--surface-muted);
+  color: var(--text);
+}
+
+.form-field span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.event-modal-form input,
+.event-modal-form select,
+.event-modal-form textarea {
+  min-height: var(--control-height);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-control);
+  padding: 9px 12px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.event-modal-form input:focus,
+.event-modal-form select:focus,
+.event-modal-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: var(--focus-ring);
+}
+
+.event-modal-actions {
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
