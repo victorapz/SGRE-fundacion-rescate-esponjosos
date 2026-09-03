@@ -2,14 +2,6 @@
 
 Proyecto desarrollado como tesis de Ingeniería Civil Informática.
 
-## Configuración local y seguridad
-
-Las credenciales, certificados, tokens y configuraciones de infraestructura no
-forman parte del repositorio. Copia `backend/.env.example` y
-`frontend/.env.example` a los archivos de entorno locales que corresponda y
-configúralos fuera de Git. Las variables `VITE_*` se incorporan al navegador,
-por lo que solo deben contener información destinada a ser pública.
-
 ## Descripción
 
 Sistema web para digitalizar y centralizar procesos internos y externos
